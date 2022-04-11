@@ -35,4 +35,4 @@ It is highly recommended that you make use of “kubectl -k apply” as a means 
 For more information: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 
 
-Please remember in all cases that this is a prototype level application, and while it should conform to 12 factor it need not be robust, or even well written.  The point is purely to exercise kubernetes and it’s usage from a code-first standpoint.
+Please remember in all cases that this is a prototype level application, and while it should conform to 12 factor it need not be robust, or even well written.  The point is purely to exercise kubernetes and it’s usage from a code-first standpoint
