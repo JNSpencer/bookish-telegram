@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "socket.io": "^4.4.1"
+    "name": "bookish-telegram-websocket",
+    "version": "1.0.0",
+    "description": "WebSocket Server for bookish-telegram",
+    "main": "websocket-server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node websocket-server.js"
+    },
+    "keywords": [],
+    "author": "Kris Gish, Devon Smith, Jamie Spencer",
+    "license": "tbd",
+    "dependencies": {
+        "websocket": "^1.0.34"
   }
 }

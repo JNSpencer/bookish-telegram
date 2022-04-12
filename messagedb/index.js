@@ -1,10 +1,11 @@
+
 const express = require("express");
 const cors = require("cors");
 const db = require("./db/db.js");
 const Message = require("./models/message.js");
 
 const port = 8463;
-const dbUrl = "mongodb://localhost:27017/chat-demo";
+const dbUrl = "mongodb://localhost:27017/chat-demo";  // Don't forget to read this from env
 const frontUrl = "http://localhost:3000";
 
 
