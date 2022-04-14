@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatmsg-deployment
+  labels: 
+    app: chatmsg
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: chatmsg
+  template: 
+    metadata:
+      labels: 
+        app: chatmsg
+    spec: 
+      containers:
+      - name: chatmsg
+        image: cashelbloom/img-messagedb:v1.0
+        ports:
+        - containerPort: 5432
+        env: 
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: message-db-secret
+              key: message-db-root-user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: message-db-secret
+              key: message-db-root-pw
