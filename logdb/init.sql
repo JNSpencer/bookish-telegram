@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS message(log_id INT NOT NULL,client_message varchar(250), PRIMARY KEY (log_id)); 
