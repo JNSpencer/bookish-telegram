@@ -1,8 +1,0 @@
-message-database:
-  image: mongo:latest
-  command: mogod --port 27018
-  ports: 
-    - '27018:27017'
-  restart: always
-  networks:
-    - 'messagedb-network'
