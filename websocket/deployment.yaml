@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: websocket-deployment
   labels: 
-    app: chatmsg
+    app: chatws
 spec: 
-  replicas: 1
+  replicas: 3
   selector: 
     matchLabels:
-      app: chatmsg
+      app: chatws
   template: 
     metadata:
       labels: 
-        app: chatmsg
+        app: chatws
     spec: 
       containers:
-      - name: chatmsg
+      - name: chatws
         image: cashelbloom/img-messagedb:v1.0
         ports:
-        - containerPort: 9999
+        - containerPort: 80

@@ -3,9 +3,11 @@ kind: Service
 metadata: 
   name: websocket-service
 spec:
+  type: NodePort
   selector:
-    app: chatmsg
+    app: chatws
   ports:
     - protocol: TCP
       port: 9999
       targetPort: 9999
+      nodePort: 32080

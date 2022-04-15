@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var WebSocketServer = require('websocket').server;
+var save = require('./savemessage.js');
 var http = require('http');
 var listenPort = '9999'
 
@@ -42,8 +43,9 @@ wsServer.on('request', function(request) {
     console.log((new Date()) + ' Connection accepted.');
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
-            // This goes to message db...
-            console.log('Received Message: ' + message.utf8Data);
+            // Write this to message db...
+            save.saveData(message.utf8Data);
+            // console.log('Received Message: ' + message.utf8Data);
             connection.sendUTF(message.utf8Data);
         }
         else if (message.type === 'binary') {
